@@ -7,6 +7,11 @@ namespace Lab3App
         public string Description;
         public CollectionBoard Board;
 
+        public Collectable(string description)
+        {
+            Description = description;
+        }
+        
         public abstract void Display();
 
         public virtual void AddMe(List<Collectable> list)

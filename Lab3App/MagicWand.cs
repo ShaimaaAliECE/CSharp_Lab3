@@ -5,13 +5,13 @@ namespace Lab3App
     public class MagicWand : Tool
     {
         public MagicWand(string description) : base(description) { }
-        public void Display()
+        public override void Display()
         {
-            Console.WriteLine("MagicWand " + this.description + " is displayed");
+            Console.WriteLine("MagicWand " + Description + " is displayed");
         }
         public override void DoAction()
         {
-            Console.WriteLine("MagicWand is used.")
+            Console.WriteLine("MagicWand is used.");
         }
     }
 }

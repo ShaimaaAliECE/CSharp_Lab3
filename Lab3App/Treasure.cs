@@ -7,9 +7,15 @@ namespace Lab3App
     {
         public int Score;
 
+        public Treasure(string description, int score) : base(description)
+        {
+            Score = score;
+        }
+        
+
         public void updateTotalScore()
         {
-            Board.TotalScore += score;
+            Board.TotalScore += Score;
             Console.WriteLine("Total Score is updated to: " + Board.TotalScore);
         }
 

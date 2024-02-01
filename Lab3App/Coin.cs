@@ -6,10 +6,8 @@ namespace Lab3App
     {
         public int Value;
 
-        public Coin(string description, int score, int value)
+        public Coin(string description, int score, int value): base (description, score)
         {
-            Description = description;
-            Score = score;
             Value = value;
         }
 
@@ -20,14 +18,14 @@ namespace Lab3App
 
         public void updateTotalValue()
         {
-            Board.TotalValue = value;
+            Board.TotalValue = Value;
             Console.WriteLine("Total value is updated to: " + Board.TotalValue);
         }
 
         public override void AddMe(List<Collectable> list)
         {
             base.AddMe(list);
-            updateTotalScore();
+            updateTotalValue();
         }
     }
 }
