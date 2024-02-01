@@ -29,13 +29,13 @@ namespace Lab3App
             possibleCollectiable.Add(new Axe("OnlyAxe"));
 
             // One MagicWand
-            possibleCollectiable.Add(new Axe("OnlyMagicWand"));
+            possibleCollectiable.Add(new MagicWand("OnlyMagicWand"));
 
             // Associate the CollectionBoard object to all the possible Collectiables
             // using a foreach loop
             foreach (Collectable collectable in  possibleCollectiable)
             {
-                collectable.Board = board;
+               collectable.Board = board;
             }
 
             // Create an empty list to start collecting 
@@ -43,7 +43,7 @@ namespace Lab3App
 
             //Collect the items one-by-one in a foreach loop
             foreach (Collectable collectable in possibleCollectiable)
-            { 
+            {
                 collectable.AddMe(collected);
             }
 
@@ -55,6 +55,8 @@ namespace Lab3App
             {
                 collectable.Display();
             }
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
         }
     }
 }
