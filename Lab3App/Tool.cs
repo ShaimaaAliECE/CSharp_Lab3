@@ -4,8 +4,6 @@ namespace Lab3App
 {
     public abstract class Tool : Collectable
     {
-        public Tool (string description): base (description) { }
-
         public abstract void DoAction();
 
         public abstract void Display();

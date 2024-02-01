@@ -4,15 +4,13 @@ namespace Lab3App
 {
     public class Coin : Treasure
     {
-        public int value;
-        public int Value
+        public int Value;
+
+        public Coin(string description, int score, int value)
         {
-            get { return value; }
-            set { this.value = value; }
-        }
-        public Coin (string description, int score, int value) : base(description, score)
-        {
-            this.value = value;
+            Description = description;
+            Score = score;
+            Value = value;
         }
 
         public override void Display()
@@ -32,3 +30,4 @@ namespace Lab3App
             updateTotalScore();
         }
     }
+}
