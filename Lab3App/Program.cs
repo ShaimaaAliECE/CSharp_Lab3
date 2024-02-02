@@ -10,7 +10,7 @@ namespace Lab3App
     {
         static void Main(string[] args)
         {
-            // Create a collection board
+            // Create a collection board    
             CollectionBoard board = new CollectionBoard();
 
             List<Collectable> possibleCollectiable = new List<Collectable>();
