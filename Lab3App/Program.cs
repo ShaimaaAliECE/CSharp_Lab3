@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab3App
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -33,9 +33,9 @@ namespace Lab3App
 
             // Associate the CollectionBoard object to all the possible Collectiables
             // using a foreach loop
-            foreach (Collectable collectable in  possibleCollectiable)
+            foreach (Collectable collectable in possibleCollectiable)
             {
-                collectable.Board = board;
+               collectable.Board = board;
             }
 
             // Create an empty list to start collecting 
@@ -43,7 +43,7 @@ namespace Lab3App
 
             //Collect the items one-by-one in a foreach loop
             foreach (Collectable collectable in possibleCollectiable)
-            { 
+            {
                 collectable.AddMe(collected);
             }
 
@@ -55,6 +55,8 @@ namespace Lab3App
             {
                 collectable.Display();
             }
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
         }
     }
 }
